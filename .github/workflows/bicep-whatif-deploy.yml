@@ -48,7 +48,7 @@ jobs:
         inlineScript: |
           az deployment sub validate \
             --name validate-${{ github.run_id }} \
-            --template-file infrastructure/main.bicep \
+            --template-file Infrastructure/main.bicep \
             --location $LOCATION     
 
     # Preview changes
@@ -58,7 +58,7 @@ jobs:
         inlineScript: |
           az deployment sub what-if \
             --name whatif-${{ github.run_id }} \
-            --template-file infrastructure/main.bicep \
+            --template-file Infrastructure/main.bicep \
             --location $LOCATION > whatif
             
       # Create string output of Whatif
@@ -130,6 +130,6 @@ jobs:
         inlineScript: |
           az deployment sub create \
             --name deploy-${{ github.run_id }} \
-            --template-file infrastructure/main.bicep \
+            --template-file Infrastructure/main.bicep \
             --location $LOCATION 
             
