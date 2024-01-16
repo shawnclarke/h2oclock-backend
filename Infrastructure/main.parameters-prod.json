@@ -14,7 +14,7 @@
     "logAnalyticsWorkspaceName": {
       "value": "core-log-analytics-workspace"
     },
-    "linuxFxVersion ": {
+    "linuxFxVersion": {
       "value": "DOTNET-ISOLATED|8.0"
     },
     "sensorfunctionsAppSettings": {
