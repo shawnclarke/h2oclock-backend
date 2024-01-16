@@ -5,6 +5,7 @@ param location string
 param prefix string
 param name string
 param serverFarmId string
+param linuxFxVersion string
 
 resource functionApp 'Microsoft.Web/sites@2021-03-01' = {
   name: '${prefix}-${environment}-${name}-function'
@@ -12,6 +13,9 @@ resource functionApp 'Microsoft.Web/sites@2021-03-01' = {
   location: location
   properties: {
     serverFarmId: serverFarmId
+    siteConfig: {
+      linuxFxVersion: linuxFxVersion
+    }
 }
 }
 

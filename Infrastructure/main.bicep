@@ -9,6 +9,7 @@ param sensorfunctionsAppSettings object
 param h2oclockProdDbKey string
 param h2oclockProdDbEndPointUri string
 param logAnalyticsWorkspaceName string
+param linuxFxVersion string
 
 resource rg 'Microsoft.Resources/resourceGroups@2021-01-01' = {
   name: 'h2oclock'
@@ -57,6 +58,7 @@ module sensorFunctionsApp 'modules/functions-app.module.bicep' = {
     prefix: prefix
     name: 'sensor-data'
     serverFarmId: appHostPlan.outputs.serverFarmId
+    linuxFxVersion: linuxFxVersion
   }
   dependsOn: [
     functionsStorage
