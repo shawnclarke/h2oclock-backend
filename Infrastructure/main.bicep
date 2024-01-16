@@ -11,7 +11,7 @@ param h2oclockProdDbEndPointUri string
 param logAnalyticsWorkspaceName string
 
 resource rg 'Microsoft.Resources/resourceGroups@2021-01-01' = {
-  name: 'rg-h2oclock-test'
+  name: 'h2oclock'
   location: location
 }
 
