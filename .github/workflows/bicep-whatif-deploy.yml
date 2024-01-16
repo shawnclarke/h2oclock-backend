@@ -5,12 +5,12 @@ on:
     branches:
     - main
     paths:
-    - Infrasturcture
+    - 'Infrasturcture/**'
   pull_request:
     branches:
     - main
     paths:
-    - Infrasturcture
+    - 'Infrasturcture/**'
 
 #Special permissions required for OIDC authentication
 permissions:
